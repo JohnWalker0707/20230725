@@ -1,4 +1,14 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
-driver = webdriver.Chrome("chromedriver.exe")
-driver.get('https://www.google.com.tw/?gws_rd=ssl')
+options=Options()
+options.chrome_executable_path='\chromedriver-win64\chromedriver.exe'
+
+
+driver = webdriver.Chrome(options=options)
+driver.get('https://www.google.com.tw/')
+
+
+
+
+driver.close()
